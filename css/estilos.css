@@ -1,0 +1,274 @@
+/* ==========================================
+   TARJETA DIGITAL - FARMACIAS LA PIEDAD
+   Diseño mobile first
+   ========================================== */
+
+:root {
+    --azul-principal: #159bd3;
+    --azul-oscuro: #0b4f78;
+    --azul-suave: #eaf7fd;
+    --fondo: #f4f8fb;
+    --blanco: #ffffff;
+    --texto: #1f2937;
+    --texto-secundario: #667085;
+    --verde: #25d366;
+    --borde: #dce8ef;
+    --sombra: 0 18px 50px rgba(15, 77, 112, 0.14);
+    --radio-grande: 28px;
+    --radio: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background:
+        radial-gradient(circle at top left, rgba(21, 155, 211, 0.16), transparent 32%),
+        var(--fondo);
+}
+
+a {
+    color: inherit;
+}
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 14px;
+    display: grid;
+    place-items: center;
+}
+
+.tarjeta {
+    width: min(100%, 520px);
+    overflow: hidden;
+    background: var(--blanco);
+    border: 1px solid rgba(220, 232, 239, 0.9);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra);
+}
+
+.encabezado {
+    padding: 30px 22px 22px;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f5fbfe 100%);
+}
+
+.logotipo {
+    display: block;
+    width: min(100%, 360px);
+    max-height: 145px;
+    margin: 0 auto 18px;
+    object-fit: contain;
+}
+
+h1 {
+    margin: 0;
+    color: var(--azul-oscuro);
+    font-size: clamp(1.7rem, 6vw, 2.35rem);
+    line-height: 1.15;
+}
+
+.eslogan {
+    margin: 8px 0 18px;
+    color: var(--texto-secundario);
+    font-size: 1rem;
+}
+
+.estado {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 15px;
+    color: #176b3a;
+    background: #eafaf0;
+    border: 1px solid #c8efd5;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.estado__punto {
+    width: 10px;
+    height: 10px;
+    background: #22a657;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(34, 166, 87, 0.13);
+}
+
+.acciones {
+    padding: 22px;
+    display: grid;
+    gap: 12px;
+}
+
+.accion {
+    min-height: 72px;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--texto);
+    text-decoration: none;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: 0 7px 20px rgba(31, 41, 55, 0.055);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.accion:hover,
+.accion:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--azul-principal);
+    box-shadow: 0 12px 26px rgba(15, 77, 112, 0.12);
+    outline: none;
+}
+
+.accion__icono {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    display: grid;
+    place-items: center;
+    color: var(--azul-oscuro);
+    background: var(--azul-suave);
+    border-radius: 14px;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.accion strong,
+.accion small {
+    display: block;
+}
+
+.accion strong {
+    margin-bottom: 3px;
+    font-size: 1rem;
+}
+
+.accion small {
+    color: var(--texto-secundario);
+    font-size: 0.86rem;
+}
+
+.accion--principal {
+    color: var(--blanco);
+    background: linear-gradient(135deg, var(--azul-principal), #0e7fb5);
+    border-color: transparent;
+}
+
+.accion--principal small {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.accion--principal .accion__icono {
+    color: var(--blanco);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.accion--whatsapp {
+    border-color: rgba(37, 211, 102, 0.45);
+}
+
+.accion--whatsapp .accion__icono {
+    color: #117a37;
+    background: #eafaf0;
+}
+
+.informacion {
+    margin: 0 22px 22px;
+    padding: 20px;
+    background: #f8fbfd;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+}
+
+.informacion h2 {
+    margin: 0 0 17px;
+    color: var(--azul-oscuro);
+    font-size: 1.1rem;
+}
+
+.dato {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 10px;
+    padding: 13px 0;
+    border-top: 1px solid #e3edf2;
+}
+
+.dato:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.dato:last-of-type {
+    padding-bottom: 0;
+}
+
+.dato strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.dato p {
+    margin: 0;
+    color: var(--texto-secundario);
+    line-height: 1.55;
+}
+
+.dato a {
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pie {
+    padding: 20px 22px 24px;
+    text-align: center;
+    color: var(--texto-secundario);
+    border-top: 1px solid var(--borde);
+}
+
+.pie p {
+    margin: 0 0 6px;
+    color: var(--azul-oscuro);
+    font-weight: 700;
+}
+
+@media (min-width: 700px) {
+    .pagina {
+        padding: 40px 20px;
+    }
+
+    .tarjeta {
+        width: min(100%, 620px);
+    }
+
+    .acciones {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .accion:first-child,
+    .accion:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
