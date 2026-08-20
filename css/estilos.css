@@ -168,6 +168,13 @@ h1 {
     border-color: transparent;
 }
 
+.accion--principaldesc {
+    color: var(--blanco);
+    background: linear-gradient(135deg, var(--azul-principal), #d855a1);
+    border-color: transparent;
+}
+
+
 
 .accion--principal small {
     color: rgba(255, 255, 255, 0.86);
@@ -185,6 +192,35 @@ h1 {
 .accion--whatsapp .accion__icono {
     color: #117a37;
     background: #eafaf0;
+}
+
+/* ==========================================
+   iconos agregados
+   ========================================== */
+.accion__imagen-icono {
+    width: 26px;
+    height: 26px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.dato__icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.dato__imagen-icono {
+    width: 26px;
+    height: 26px;
+
+    object-fit: contain;
+    display: block;
 }
 
 .informacion {
