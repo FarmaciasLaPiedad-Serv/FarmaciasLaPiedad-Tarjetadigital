@@ -200,9 +200,7 @@ h1 {
 .accion__imagen-icono {
     width: 26px;
     height: 26px;
-
     object-fit: contain;
-
     display: block;
 }
 
@@ -210,7 +208,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
 }
 
@@ -218,7 +215,6 @@ h1 {
 .dato__imagen-icono {
     width: 26px;
     height: 26px;
-
     object-fit: contain;
     display: block;
 }

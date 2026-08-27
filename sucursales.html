@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Farmacias La Piedad | Nuestras Sucursales</title>
+    <link rel="stylesheet" href="css/sucursales.css" />
+  </head>
+
+  <body>
+    <main class="pagina-sucursales">
+      <!-- =========================
+             LOGOTIPO
+        ========================== -->
+      <header class="encabezado">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Farmacias La Piedad" class="logo" />
+        </a>
+      </header>
+
+      <!-- =========================
+             PRESENTACIÓN
+        ========================== -->
+
+      <nav class="barra-sucursales">
+        <div class="barra-sucursales__contenido">
+          <h1>Nuestras Sucursales</h1>
+          <p>Encuentra la sucursal más cercana para ti</p>
+        </div>
+      </nav>
+
+      <!-- =========================
+             SELECTOR DE CIUDAD
+        ========================== -->
+
+      <section class="busqueda">
+        <label for="ciudad"> Buscar en: </label>
+        <select id="ciudad">
+          <option value="comitan">Comitán</option>
+          <option value="margaritas">Las Margaritas</option>
+        </select>
+      </section>
+
+      <!-- =========================
+             CONTENIDO
+        ========================== -->
+
+      <section class="contenido">
+        <!-- LISTA -->
+
+        <div class="panel-sucursales">
+          <div class="titulo-panel">
+            <h2>Sucursales</h2>
+
+            <span id="contador-sucursales"> </span>
+          </div>
+
+          <div id="lista-sucursales">
+            <!-- JavaScript colocará aquí
+                         las sucursales -->
+          </div>
+        </div>
+
+        <!-- MAPA -->
+
+        <div class="panel-mapa">
+          <div class="titulo-panel">
+            <h2>Ubicación</h2>
+            <span id="nombre-mapa"> Selecciona una sucursal </span>
+          </div>
+          <iframe
+            id="mapa"
+            title="Mapa de Farmacias La Piedad"
+            loading="lazy"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- =========================
+             REGRESAR
+        ========================== -->
+
+      <footer class="pie-pagina">
+        <div class="footer-contenido">
+          <div class="footer-marca">
+            <h2>Farmacias La Piedad</h2>
+
+            <p>Servicio, Precio y Calidad</p>
+          </div>
+
+          <nav class="footer-enlaces">
+            <a href="index.html"> 🏠 Inicio </a>
+
+            <a href="#ciudad"> 📍 Nuestras sucursales </a>
+          </nav>
+
+          <div class="footer-linea"></div>
+
+          <p class="footer-copyright">
+            © 2026 Farmacias La Piedad · Todos los derechos reservados
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="js/sucursales.js"></script>
+  </body>
+</html>
